@@ -1,0 +1,1 @@
+O principal objetivo é fazer com que uma página web estática, feita só com html e css, se torne interativa e responsiva, com as funcionalidades de clique, digitação, movimento do mouse e etc.
