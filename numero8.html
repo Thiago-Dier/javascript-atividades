@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" id="sabor">
+
+    <p id="resposta"></p>
+
+</body>
+
+<script>
+
+    const sabor = document.querySelector("#sabor")
+    const resposta = document.querySelector('#resposta')
+
+    sabor.addEventListener("input", ()=> {
+        const texto = sabor.value
+
+        if (texto.length > 3) {
+            if (texto == "chocolate") {
+                resposta.textContent = "Eu amo sorvete de chocolate!"
+            } else if (texto == "flocos") {
+                resposta.textContent = "Ahh, mas chocolate é meu favorito..."
+            } else {
+                resposta.textContent = "Ahh, eu esperava um sabor de sorvete..."
+            }
+        } else {
+            resposta.textContent = "Escreva algo maior aí pô"
+        }
+    })
+
+</script>
+
+</html>
