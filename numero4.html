@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+    body {
+        background: linear-gradient(to right, rgb(70, 15, 70), rgb(228, 88, 111), rgb(218, 123, 210));
+    }
+
+    .conteiner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    h1 {
+        color: blue;
+    }
+
+    #botao1 {
+        color: black;
+        background-color: greenyellow;
+        height: 50px;
+        width: 100px;
+        margin-bottom: 25px;
+        border-radius: 10px;
+    }
+
+    #zerar {
+        color: black;
+        background-color: red;
+        height: 50px;
+        width: 100px;
+        margin-bottom: 25px;
+        border-radius: 10px;
+    }
+
+    #botao1:hover {
+        transform: scale(1.2);
+        box-shadow: 0 0 15px black;
+    }
+
+    #zerar:hover {
+        transform: scale(1.2);
+        box-shadow: 0 0 15px black;
+    }
+
+</style>
+
+<body>
+
+    <div class="conteiner">
+        <h1>Botãos</h1>
+        <p id="texto">Clique no Botão</p>
+        <button id="botao1">Botão</button>
+        <button id="zerar">Zerar</button>
+    </div>
+
+</body>
+
+<script>
+
+    const texto = document.querySelector("#texto")
+    const botao = document.querySelector("#botao1")
+    const zerar = document.querySelector("#zerar")
+    let contador = 0
+
+    botao.addEventListener("click", () => {
+        contador++
+        texto.textContent = contador
+    })
+
+    zerar.addEventListener("click", () => {
+        contador = 0
+        texto.textContent = contador
+    })
+
+</script>
+
+
+</html>
