@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7</title>
+</head>
+<body>
+    
+    <img id="personagem" src="https://static.wikia.nocookie.net/yunas-princess-adventure/images/1/15/Waddles.png/revision/latest?cb=20160131182554  " >
+
+    <p id="resposta"></p>
+
+    <button id="trocar">Trocar Imagem</button>
+
+</body>
+
+<script>
+
+    const personagem = document.querySelector("#personagem")
+    const resposta = document.querySelector("#resposta")
+    const trocar = document.querySelector("#trocar")
+    const imagem1 = "https://static.wikia.nocookie.net/yunas-princess-adventure/images/1/15/Waddles.png/revision/latest?cb=20160131182554"
+    const imagem2 = "https://mystickermania.com/cdn/stickers/gravity-falls/gf-waddles-jacket-512x512.png"
+
+    let imagemAtual = 1
+
+    personagem.addEventListener("mouseenter", ()=> {
+        resposta.textContent = "Você me achou!"
+    })
+    
+    personagem.addEventListener("mouseleave", ()=> {
+        resposta.textContent = "Volte aqui!"
+    })
+
+    personagem.addEventListener("mousemove", ()=> {
+        resposta.textContent = "Para de me alisar!"
+    })
+
+    personagem.addEventListener("click", ()=> {
+        resposta.textContent = "Ei, não toca em mim!"
+    })
+
+    trocar.addEventListener("click", ()=> {
+        if (imagemAtual == 1) {
+            personagem.src = imagem2
+            imagemAtual = 2
+        } else {
+            personagem.src = imagem1
+            imagemAtual = 1
+        }
+    })
+
+</script>
+
+</html>
