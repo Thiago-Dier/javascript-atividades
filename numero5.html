@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5</title>
+</head>
+<body>
+    
+    <ul class="lista">
+    </ul>
+
+    <button id="botao">Adicionar item</button>
+
+</body>
+
+<script>
+
+    const lista = document.querySelector(".lista")
+    const botao = document.querySelector("#botao")
+
+    let contador = 0
+    botao.addEventListener("click", ()=> {
+        contador++
+
+        const linha = document.createElement("li")
+        linha.textContent = "Item n°" + contador
+
+        lista.appendChild(linha)
+    })
+
+</script>
+
+</html>
